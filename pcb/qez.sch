@@ -412,12 +412,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR08
 U 1 1 5FF547D9
-P 1900 7000
-F 0 "#PWR08" H 1900 6750 50  0001 C CNN
-F 1 "GND" H 1905 6827 50  0000 C CNN
-F 2 "" H 1900 7000 50  0001 C CNN
-F 3 "" H 1900 7000 50  0001 C CNN
-	1    1900 7000
+P 1900 7500
+F 0 "#PWR08" H 1900 7250 50  0001 C CNN
+F 1 "GND" H 1905 7327 50  0000 C CNN
+F 2 "" H 1900 7500 50  0001 C CNN
+F 3 "" H 1900 7500 50  0001 C CNN
+	1    1900 7500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -578,28 +578,6 @@ col8
 Text GLabel 4100 3650 2    50   Input ~ 0
 col7
 $Comp
-L MX_Alps_Hybrid:MX-LED MX34
-U 1 1 60E3F61A
-P 8650 3800
-F 0 "MX34" H 8732 4024 60  0000 C CNN
-F 1 "MX-LED" H 8732 3950 20  0000 C CNN
-F 2 "MX_Only:MXOnly-1.25U" H 8025 3775 60  0001 C CNN
-F 3 "" H 8025 3775 60  0001 C CNN
-	1    8650 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 60E79F6A
-P 8650 4250
-F 0 "#PWR0101" H 8650 4000 50  0001 C CNN
-F 1 "GND" H 8655 4077 50  0000 C CNN
-F 2 "" H 8650 4250 50  0001 C CNN
-F 3 "" H 8650 4250 50  0001 C CNN
-	1    8650 4250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VCC #PWR0103
 U 1 1 60FBAEEE
 P 5100 5650
@@ -633,9 +611,6 @@ Wire Wire Line
 	2500 6100 2500 6000
 Wire Wire Line
 	2500 6300 2500 6200
-Wire Wire Line
-	1600 7000 1900 7000
-Connection ~ 1900 7000
 $Comp
 L Device:R_Small R1
 U 1 1 61077AB4
@@ -1233,17 +1208,6 @@ F 4 "C68978" H 7600 3350 50  0001 C CNN "LCSC"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MX_Alps_Hybrid:MX-NoLED MX33
-U 1 1 611583AC
-P 7750 3800
-F 0 "MX33" H 7783 4023 60  0000 C CNN
-F 1 "MX-NoLED" H 7783 3949 20  0000 C CNN
-F 2 "MX_Only:MXOnly-2.75U-ReversedStabilizers-NoLED" H 7125 3775 60  0001 C CNN
-F 3 "" H 7125 3775 60  0001 C CNN
-	1    7750 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L MX_Alps_Hybrid:MX-NoLED MX36
 U 1 1 611583D4
 P 9550 3800
@@ -1339,10 +1303,6 @@ F 3 "" H 5775 1675 60  0001 C CNN
 	1    6400 1700
 	1    0    0    -1  
 $EndComp
-Text GLabel 8800 4250 3    50   Input ~ 0
-capsLED
-Wire Wire Line
-	8650 4250 8650 3900
 Connection ~ 6550 1650
 Wire Wire Line
 	6550 3050 6550 2350
@@ -1371,8 +1331,6 @@ Connection ~ 8350 1650
 Connection ~ 8350 2350
 Wire Wire Line
 	8350 2350 8350 3050
-Wire Wire Line
-	8800 3750 8800 3700
 Connection ~ 8800 1650
 Connection ~ 8800 2350
 Wire Wire Line
@@ -1425,10 +1383,6 @@ Wire Wire Line
 	1500 3550 1800 3550
 Wire Wire Line
 	7000 2350 7000 3050
-Wire Wire Line
-	8800 4250 8800 3800
-Wire Wire Line
-	8800 3800 8750 3800
 $Comp
 L MX_Alps_Hybrid:MX-NoLED MX35
 U 1 1 610CE57D
@@ -1500,13 +1454,6 @@ Connection ~ 8500 4150
 Wire Wire Line
 	8500 4150 9400 4150
 Connection ~ 8500 3950
-Wire Wire Line
-	8500 3950 8550 3950
-Connection ~ 7700 3950
-Wire Wire Line
-	7700 3950 8500 3950
-Wire Wire Line
-	7900 3750 7900 3700
 Connection ~ 7900 3050
 Connection ~ 7150 4150
 Wire Wire Line
@@ -1531,13 +1478,10 @@ F 3 "" H 7075 3725 60  0001 C CNN
 $EndComp
 Wire Wire Line
 	7850 3700 7900 3700
-Connection ~ 7900 3700
 Wire Wire Line
 	7900 3700 7900 3050
 Wire Wire Line
 	7650 3900 7650 3950
-Wire Wire Line
-	7650 3950 7700 3950
 $Comp
 L MX_Alps_Hybrid:MX-NoLED MX40
 U 1 1 6116EFF2
@@ -1559,37 +1503,75 @@ Wire Wire Line
 Wire Wire Line
 	9000 3950 9050 3950
 Connection ~ 9050 3950
-Wire Wire Line
-	8750 3700 8800 3700
-Connection ~ 8800 3700
-Wire Wire Line
-	8800 3700 8800 3050
-Wire Wire Line
-	8550 3900 8550 3950
-Connection ~ 8550 3950
-Wire Wire Line
-	8550 3950 8600 3950
 $Comp
-L MX_Alps_Hybrid:MX-LED MX41
-U 1 1 610D4743
-P 8100 4700
-F 0 "MX41" H 8182 4924 60  0000 C CNN
-F 1 "MX-LED" H 8182 4850 20  0000 C CNN
-F 2 "custom_parts:MXOnly-6.25U-ReversedStabilizers-flippedLED" H 7475 4675 60  0001 C CNN
-F 3 "" H 7475 4675 60  0001 C CNN
-	1    8100 4700
+L Device:R_Small R8
+U 1 1 6156F124
+P 1400 7350
+F 0 "R8" V 1204 7350 50  0000 C CNN
+F 1 "1M" V 1295 7350 50  0000 C CNN
+F 2 "" H 1400 7350 50  0001 C CNN
+F 3 "~" H 1400 7350 50  0001 C CNN
+	1    1400 7350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 615708C1
+P 1400 7650
+F 0 "C4" V 1171 7650 50  0000 C CNN
+F 1 "4.7nF" V 1262 7650 50  0000 C CNN
+F 2 "" H 1400 7650 50  0001 C CNN
+F 3 "~" H 1400 7650 50  0001 C CNN
+	1    1400 7650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 7350 1300 7500
+Wire Wire Line
+	1500 7650 1500 7500
+Wire Wire Line
+	1600 7000 1100 7000
+Wire Wire Line
+	1100 7000 1100 7500
+Wire Wire Line
+	1100 7500 1300 7500
+Connection ~ 1300 7500
+Wire Wire Line
+	1300 7500 1300 7650
+Wire Wire Line
+	1500 7500 1900 7500
+Wire Wire Line
+	1900 7500 1900 7000
+Connection ~ 1500 7500
+Wire Wire Line
+	1500 7500 1500 7350
+Connection ~ 1900 7500
+NoConn ~ 2500 6600
+NoConn ~ 2500 6700
+NoConn ~ 4600 6250
+Connection ~ 7900 3700
+Wire Wire Line
+	7900 3750 7900 3700
+Wire Wire Line
+	7650 3950 7700 3950
+Wire Wire Line
+	7700 3950 8500 3950
+Connection ~ 7700 3950
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX33
+U 1 1 611583AC
+P 7750 3800
+F 0 "MX33" H 7783 4023 60  0000 C CNN
+F 1 "MX-NoLED" H 7783 3949 20  0000 C CNN
+F 2 "MX_Only:MXOnly-2.75U-ReversedStabilizers-NoLED" H 7125 3775 60  0001 C CNN
+F 3 "" H 7125 3775 60  0001 C CNN
+	1    7750 3800
 	1    0    0    -1  
 $EndComp
-Text GLabel 8550 3900 0    50   Input ~ 0
-caps
-Text GLabel 8250 4650 2    50   Input ~ 0
-caps
-Text GLabel 8050 4850 0    50   Input ~ 0
-col5
-Text GLabel 8200 4800 2    50   Input ~ 0
-capsLED
 Wire Wire Line
-	8200 4800 8200 4700
+	8100 4900 8100 4800
+Wire Wire Line
+	8200 4900 8100 4900
 $Comp
 L power:GND #PWR0102
 U 1 1 610DD193
@@ -1602,7 +1584,73 @@ F 3 "" H 8200 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8200 4900 8100 4900
+	8200 4800 8200 4700
+Text GLabel 8200 4800 2    50   Input ~ 0
+capsLED
+Text GLabel 8050 4850 0    50   Input ~ 0
+col5
+Text GLabel 8250 4650 2    50   Input ~ 0
+caps
+$Comp
+L MX_Alps_Hybrid:MX-LED MX41
+U 1 1 610D4743
+P 8100 4700
+F 0 "MX41" H 8182 4924 60  0000 C CNN
+F 1 "MX-LED" H 8182 4850 20  0000 C CNN
+F 2 "custom_parts:MXOnly-6.25U-ReversedStabilizers-flippedLED" H 7475 4675 60  0001 C CNN
+F 3 "" H 7475 4675 60  0001 C CNN
+	1    8100 4700
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	8100 4900 8100 4800
+	8550 3950 8600 3950
+Wire Wire Line
+	8500 3950 8550 3950
+Connection ~ 8550 3950
+Wire Wire Line
+	8550 3900 8550 3950
+Text GLabel 8550 3900 0    50   Input ~ 0
+caps
+Wire Wire Line
+	8650 4250 8650 3900
+$Comp
+L power:GND #PWR0101
+U 1 1 60E79F6A
+P 8650 4250
+F 0 "#PWR0101" H 8650 4000 50  0001 C CNN
+F 1 "GND" H 8655 4077 50  0000 C CNN
+F 2 "" H 8650 4250 50  0001 C CNN
+F 3 "" H 8650 4250 50  0001 C CNN
+	1    8650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-LED MX34
+U 1 1 60E3F61A
+P 8650 3800
+F 0 "MX34" H 8732 4024 60  0000 C CNN
+F 1 "MX-LED" H 8732 3950 20  0000 C CNN
+F 2 "MX_Only:MXOnly-1.25U" H 8025 3775 60  0001 C CNN
+F 3 "" H 8025 3775 60  0001 C CNN
+	1    8650 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3700 8800 3050
+Wire Wire Line
+	8800 3750 8800 3700
+Connection ~ 8800 3700
+Wire Wire Line
+	8750 3700 8800 3700
+Wire Wire Line
+	8800 3800 8750 3800
+Wire Wire Line
+	8800 4250 8800 3800
+NoConn ~ 5600 6250
+NoConn ~ 4100 3150
+NoConn ~ 4100 3250
+NoConn ~ 4100 3350
+NoConn ~ 4100 2550
+Text GLabel 8800 4250 3    50   Input ~ 0
+capsLED
 $EndSCHEMATC
